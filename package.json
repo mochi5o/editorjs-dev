@@ -1,0 +1,17 @@
+{
+  "name": "editorjs-dev",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@editorjs/editorjs": "^2.28.0",
+    "@editorjs/embed": "^2.5.2",
+    "@editorjs/image": "^2.8.1",
+    "editorjs-pdf": "github:MalditaEs/editorjs-pdf",
+    "regenerator-runtime": "^0.14.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
