@@ -1,7 +1,5 @@
 # Editor.js
 
-# Editor.js
-
 このプロジェクトは、[Editor.js](https://editorjs.io/)を使用した開発および検証環境です。以下の手順で、`index.html`と`render.html`を使用してEditor.jsの動作を確認できます。
 
 ## 検証環境の使い方
