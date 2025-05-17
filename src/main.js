@@ -51,6 +51,18 @@ function createEditor(data) {
           captionPlaceholder: '出典を入力'
         }
       },
+      embed: {
+        class: Embed,
+        config: {
+          services: {
+            youtube: true,
+            instagram: true,
+            twitter: true,
+            facebook: true,
+            vimeo: true,
+          }
+        }
+      },
       image: {
         class: ImageTool,
         config: {
@@ -60,7 +72,6 @@ function createEditor(data) {
           }
         }
       },
-      embed: Embed,
       table: Table,
       checklist: {
         class: Checklist,
