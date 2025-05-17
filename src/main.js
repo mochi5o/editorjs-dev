@@ -15,7 +15,7 @@ import RawTool from '@editorjs/raw';
 import Delimiter from '@editorjs/delimiter';
 import Warning from '@editorjs/warning';
 import PDFFile from '../libs/editorjs-pdf.js';
-
+import ImageWithTextBlock from './blocks/imageWithText.js';
 
 let initialData = {
   blocks: []
@@ -72,6 +72,7 @@ function createEditor(data) {
           }
         }
       },
+      imageWithText: ImageWithTextBlock,
       table: Table,
       checklist: {
         class: Checklist,
