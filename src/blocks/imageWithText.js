@@ -36,6 +36,25 @@ export default class ImageWithTextBlock {
       this.data.imageUrl = e.target.value;
     });
 
+    // ファイルアップロード用
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*';
+
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const result = event.target.result;
+        this.image.src = result;
+        this.image.className = 'image-preview';
+        this.data.imageUrl = result;
+      };
+      reader.readAsDataURL(file);
+    });
+
     // テキスト入力
     this.textarea = document.createElement('textarea');
     this.textarea.className = 'text';
@@ -87,6 +106,7 @@ export default class ImageWithTextBlock {
     floatControl.appendChild(floatCheckbox);
 
     this.wrapper.appendChild(this.image);
+    this.wrapper.appendChild(fileInput);
     this.wrapper.appendChild(imageInput);
     this.wrapper.appendChild(floatControl);
     this.wrapper.appendChild(selectWrapper);
